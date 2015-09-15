@@ -102,6 +102,13 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
         let fraction = 1.0 - offset
         menuContainerView.layer.transform = transformForFraction(fraction)
         menuContainerView.alpha = fraction
+        
+        
+        if let detailViewController = detailViewController {
+            if let rotatingView = detailViewController.hamburgerView {
+                rotatingView.rotate(fraction)
+            }
+        }
     }
 
 
