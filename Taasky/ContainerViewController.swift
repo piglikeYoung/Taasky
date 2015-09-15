@@ -16,10 +16,11 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
     
     private var detailViewController: DetailViewController?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        hideOrShowMenu(false, animated: false)
+    var showingMenu = false
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        hideOrShowMenu(showingMenu, animated: false)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -39,6 +40,9 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func hideOrShowMenu(show: Bool, animated: Bool) {
+        
+        showingMenu = show
+        
         // menuOffset就是menuContainView的宽度80，如果是true，偏移量就是0，菜单栏不显示
         let menuOffset = CGRectGetWidth(menuContainerView.bounds)
         scrollView.setContentOffset(show ? CGPointZero : CGPoint(x: menuOffset, y: 0), animated: animated)
@@ -52,6 +56,12 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
         */
         // ScrollView的偏移量和菜单栏宽度相等的时候，禁用pagingEnabled
         scrollView.pagingEnabled = scrollView.contentOffset.x < (scrollView.contentSize.width - CGRectGetWidth(scrollView.frame))
+        
+        let menuOffset = CGRectGetWidth(menuContainerView.bounds)
+        // 如果ScrollView的偏移量和menuContainerView的宽度相同(即菜单栏隐藏)， showingMenu设置为false，相反为true
+        showingMenu = !CGPointEqualToPoint(CGPoint(x: menuOffset, y: 0), scrollView.contentOffset)
+        println("didEndDecelerating showingMenu \(showingMenu)")
     }
+
 
 }
