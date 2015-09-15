@@ -18,6 +18,7 @@
 		40C05A061AB8F86E005CB016 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C05A051AB8F86E005CB016 /* Extensions.swift */; };
 		40C05A081AB8F9BB005CB016 /* MenuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40C05A071AB8F9BB005CB016 /* MenuItems.plist */; };
 		7D5DDDB41BA7F11800A34023 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DDDB31BA7F11800A34023 /* ContainerViewController.swift */; };
+		7D5DDDB61BA810CE00A34023 /* HamburgerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DDDB51BA810CE00A34023 /* HamburgerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		40C05A051AB8F86E005CB016 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		40C05A071AB8F9BB005CB016 /* MenuItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuItems.plist; sourceTree = "<group>"; };
 		7D5DDDB31BA7F11800A34023 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		7D5DDDB51BA810CE00A34023 /* HamburgerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				7D5DDDB31BA7F11800A34023 /* ContainerViewController.swift */,
 				40C059FF1AB8F7F9005CB016 /* MenuViewController.swift */,
 				40C05A011AB8F817005CB016 /* DetailViewController.swift */,
+				7D5DDDB51BA810CE00A34023 /* HamburgerView.swift */,
 				40C059E31AB8F7AE005CB016 /* Main.storyboard */,
 				40C05A031AB8F831005CB016 /* MenuItemCell.swift */,
 				40C05A071AB8F9BB005CB016 /* MenuItems.plist */,
@@ -232,6 +235,7 @@
 				40C05A001AB8F7F9005CB016 /* MenuViewController.swift in Sources */,
 				40C059E01AB8F7AE005CB016 /* AppDelegate.swift in Sources */,
 				40C05A041AB8F831005CB016 /* MenuItemCell.swift in Sources */,
+				7D5DDDB61BA810CE00A34023 /* HamburgerView.swift in Sources */,
 				7D5DDDB41BA7F11800A34023 /* ContainerViewController.swift in Sources */,
 				40C05A021AB8F817005CB016 /* DetailViewController.swift in Sources */,
 			);

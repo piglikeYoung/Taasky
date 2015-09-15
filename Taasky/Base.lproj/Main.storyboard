@@ -148,6 +148,10 @@
                             <constraint firstItem="7fC-XV-Aj7" firstAttribute="width" secondItem="TRA-Wo-khp" secondAttribute="width" constant="80" id="vWR-Sr-fh4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="menuContainerView" destination="s3F-2T-gaU" id="z8Z-Pq-73o"/>
+                        <outlet property="scrollView" destination="9Ty-XL-Xwv" id="096-x7-gbJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpb-3v-k2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
