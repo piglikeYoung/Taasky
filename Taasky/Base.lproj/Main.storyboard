@@ -100,6 +100,7 @@
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3F-2T-gaU" userLabel="Menu Container View">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="600"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="ehV-tX-4q7"/>
                                                 </constraints>
@@ -109,8 +110,9 @@
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFg-7T-3HJ" userLabel="Detail Container View">
                                                 <rect key="frame" x="80" y="0.0" width="600" height="600"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <connections>
-                                                    <segue destination="Y02-Wj-455" kind="embed" id="cm8-gX-Gn6"/>
+                                                    <segue destination="Y02-Wj-455" kind="embed" identifier="DetailViewSegue" id="cm8-gX-Gn6"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -187,7 +189,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHg-a9-lXX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-39" y="595"/>
+            <point key="canvasLocation" x="41" y="600"/>
         </scene>
     </scenes>
 </document>

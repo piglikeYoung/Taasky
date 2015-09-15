@@ -17,19 +17,12 @@ class MenuViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Remove the drop shadow from the navigation bar
+    // 不显示navigation bar底部阴影
     navigationController!.navigationBar.clipsToBounds = true
-  }
-  
-  // MARK: - Segues
-  
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    if segue.identifier == "showDetail" {
-      if let indexPath = self.tableView.indexPathForSelectedRow() {
-        let object = menuItems[indexPath.row] as! NSDictionary
-        (segue.destinationViewController as! DetailViewController).menuItem = object
-      }
-    }
+    
+    // 默认选中第一个
+    (navigationController!.parentViewController as! ContainerViewController).menuItem =
+        (menuItems[0] as! NSDictionary)
   }
   
   // MARK: - Table View
@@ -53,5 +46,13 @@ class MenuViewController: UITableViewController {
     cell.configureForMenuItem(menuItem)
     return cell
   }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // 取消选中
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        // 从menuItems数组中取出menuItem字典
+        let menuItem = menuItems[indexPath.row] as! NSDictionary
+        (navigationController!.parentViewController as! ContainerViewController).menuItem = menuItem
+    }
   
 }

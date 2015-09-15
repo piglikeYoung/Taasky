@@ -11,6 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
   
   @IBOutlet weak var backgroundImageView: UIImageView!
+
   
   var menuItem: NSDictionary? {
     didSet {
@@ -20,5 +21,12 @@ class DetailViewController: UIViewController {
       }
     }
   }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // 不显示navigation bar底部阴影
+        navigationController!.navigationBar.clipsToBounds = true
+    }
+
   
 }
