@@ -16,6 +16,7 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
     
     private var detailViewController: DetailViewController?
     
+    // 默认不显示菜单栏
     var showingMenu = false
     
     override func viewDidLayoutSubviews() {

@@ -52,6 +52,7 @@ class MenuViewController: UITableViewController {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         // 从menuItems数组中取出menuItem字典
         let menuItem = menuItems[indexPath.row] as! NSDictionary
+        // 改变detailView的内容
         (navigationController!.parentViewController as! ContainerViewController).menuItem = menuItem
     }
   
